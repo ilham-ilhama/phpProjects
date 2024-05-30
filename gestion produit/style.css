@@ -1,0 +1,29 @@
+.container{
+    width: 50%;
+}
+.card{
+    border: solid 1px;
+    width: 22%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 15px;
+}
+h4{
+    margin: 0;
+}
+#post{
+    border: solid 1px;
+    width: 60%;
+    height: 300px;
+    padding-left: 50px;
+    
+}
+.myPost{
+
+    height: 400px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}

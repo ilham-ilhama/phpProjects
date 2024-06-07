@@ -2,7 +2,6 @@
 <?php
 require 'inscreption.php';
 $statement = $pdo -> prepare("SELECT * FROM stagiaire");
-
 $statement ->execute();
 $results = $statement->fetchALL(PDO::FETCH_ASSOC);
 

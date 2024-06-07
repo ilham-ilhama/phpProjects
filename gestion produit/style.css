@@ -27,3 +27,7 @@ h4{
     justify-content:center;
     align-items: center;
 }
+body{
+display: flex;
+flex-wrap: wrap;
+}

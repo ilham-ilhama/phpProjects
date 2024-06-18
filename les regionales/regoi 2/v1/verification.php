@@ -1,18 +1,25 @@
 <?php
-session_start();
-require 'connBD.php';
+session_start();//pour les donne
 
-if($_SERVER['REQUEST_METHOD']==='POST'){
-    if(isset($_POST["user"])&& isset($_POST["password1"])){
-        $statement = $pdo ->prepare("SELECT * FROM client WHERE user =:user AND password1 = :password1");
+require 'connBD.php';
+//method 
+
+if($_SERVER['REQUEST_METHOD'] ==='POST'){
+   
+    //name 
+    if(isset($_POST["user"]) || isset($_POST["password1"])){
+        
+                                                                //base de donne 
+        $statement = $pdo ->prepare("SELECT * FROM client WHERE email =:user AND password = :password1");
         $statement ->execute([
             ':user' =>$_POST['user'],
             ':password1' =>$_POST['password1'],
         ]);
-        $admin = $statement -> fetch(PDO::FETCH_ASSOC);
+        $admin = $statement -> fetch(PDO::FETCH_ASSOC);//objet liste
         var_dump($admin);
         die();
-        if($admin){
+       
+        if($admin){ //pour  vairifier est ce que employer connecte
             $_SESSION['user'] = $user;
             header("location:inscrire.php");
             exit;

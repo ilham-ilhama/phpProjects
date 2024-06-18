@@ -13,4 +13,4 @@ try{
     echo"fail" . $e->getMessage(); 
 }
 
-?>
+?>; 
